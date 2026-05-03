@@ -2,7 +2,7 @@
 
 ## What Is a World Model?
 
-In 1943, the British psychologist Kenneth Craik proposed that the mind works by constructing small-scale models of reality — internal representations that can be manipulated to anticipate events before they happen. Rather than reacting to the world as it presents itself, an intelligent agent carries a compact simulation: run the model forward, observe the predicted outcome, adjust behavior accordingly.
+In 1943, the British psychologist Kenneth Craik proposed in [*The Nature of Explanation*](https://archive.org/details/natureofexplanat0000crai) that the mind works by constructing small-scale models of reality — internal representations that can be manipulated to anticipate events before they happen. Rather than reacting to the world as it presents itself, an intelligent agent carries a compact simulation: run the model forward, observe the predicted outcome, adjust behavior accordingly.
 
 This idea predates modern AI by decades, but it describes what the field now calls a *world model*: a learned representation of an environment that supports prediction. Given a current state — a physical scene, a robot's sensor readings, a game board — a world model estimates what will happen next.
 
@@ -20,15 +20,15 @@ World models are trained differently. They learn from multimodal inputs — vide
 
 ## Key Frameworks and Recent Systems
 
-The modern research program on learned world models was consolidated by Ha and Schmidhuber in a 2018 paper that trained an agent to play video games using a compressed internal model of the environment. The agent could dream — plan and train within its own internal simulation rather than in the actual environment.
+The modern research program on learned world models was consolidated by [Ha and Schmidhuber in a 2018 paper](https://arxiv.org/abs/1803.10122) that trained an agent to play video games using a compressed internal model of the environment. The agent could dream — plan and train within its own internal simulation rather than in the actual environment.
 
-Yann LeCun has proposed a more ambitious architecture called the Joint Embedding Predictive Architecture (JEPA). Rather than predicting raw pixels or tokens, JEPA learns to predict abstract representations — the essential structure of what will happen, without committing to irrelevant perceptual detail. Meta's V-JEPA 2 (2025) applies this approach to video understanding and physical scene prediction. Other recent systems include Google DeepMind's Genie 3, which generates interactive environments from a single image, and NVIDIA Cosmos, a family of world foundation models designed for robotics, trained on large-scale video of physical environments.
+Yann LeCun has proposed a more ambitious architecture called the [Joint Embedding Predictive Architecture (JEPA)](https://openreview.net/forum?id=BZ5a1r-kVsf). Rather than predicting raw pixels or tokens, JEPA learns to predict abstract representations — the essential structure of what will happen, without committing to irrelevant perceptual detail. [Meta's V-JEPA 2](https://arxiv.org/abs/2506.09985) (2025) applies this approach to video understanding and physical scene prediction. Other recent systems include Google DeepMind's [Genie 3](https://deepmind.google/research/publications/genie-3/), which generates interactive environments from a single image, and [NVIDIA Cosmos](https://arxiv.org/abs/2501.03575), a family of world foundation models designed for robotics, trained on large-scale video of physical environments.
 
 ---
 
 ## Why the Field Is Underdeveloped
 
-Despite this momentum, the infrastructure gap between world models and LLMs is large. LLMs benefit from accumulated tooling: standardized benchmarks (MMLU, BIG-Bench, HELM), evaluation harnesses, model APIs, and a shared vocabulary for comparing systems. A researcher who wants to evaluate a new LLM can do so in an afternoon using existing infrastructure.
+Despite this momentum, the infrastructure gap between world models and LLMs is large. LLMs benefit from accumulated tooling: standardized benchmarks ([MMLU](https://arxiv.org/abs/2009.03300), [BIG-Bench](https://arxiv.org/abs/2206.04615), [HELM](https://arxiv.org/abs/2211.09110)), evaluation harnesses, model APIs, and a shared vocabulary for comparing systems. A researcher who wants to evaluate a new LLM can do so in an afternoon using existing infrastructure.
 
 No equivalent exists for world models. There is no agreed-upon benchmark format, no shared schema for physical scene data, and evaluation methods are fragmented across research groups. The compute required to train competitive world models is concentrated in a small number of industrial labs — the same labs best positioned to set de facto standards, with limited incentive to share them.
 
