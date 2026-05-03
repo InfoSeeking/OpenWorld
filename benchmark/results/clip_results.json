@@ -1,0 +1,252 @@
+[
+  {
+    "clip_id": "clip_ball_rolling_off_table",
+    "scenario_type": "physical",
+    "video_url": "https://InfoSeeking.github.io/WorldModelDemo/clips/clip_ball_rolling_off_table.mp4",
+    "pause_frame_seconds": 7.5,
+    "ground_truth": "The blue ball rolls off the edge of the table and falls toward the ground below.",
+    "llm_output": "The blue ball rolls off the edge of the table and falls through the air toward the ground below.",
+    "vision_output": "A blue ball is launched from the left side and hits the red and white horizontal bar, causing it to vibrate.",
+    "world_model_output": "A blue ball is launched from the left side and hits the red and white horizontal bar, causing it to vibrate.",
+    "analysis": "LLM gets the key physics right: the ball rolls off the table and falls. Vision and world model miss the scene and predict a different setup with a launched ball hitting a bar. Stronger model for this clip: LLM.",
+    "models": {
+      "llm": {
+        "name": "Claude 4.5 Haiku",
+        "version": "4.5"
+      },
+      "vision": {
+        "name": "Amazon Nova Pro",
+        "version": "1.0"
+      },
+      "world_model": {
+        "name": "Meta V-JEPA",
+        "version": "2.0"
+      }
+    }
+  },
+  {
+    "clip_id": "clip_box_occlusion_easy",
+    "scenario_type": "physical",
+    "video_url": "https://InfoSeeking.github.io/WorldModelDemo/clips/clip_box_occlusion_easy.mp4",
+    "pause_frame_seconds": 7.5,
+    "ground_truth": "The red cube falls until it reaches the bottom of the wooden enclosure and comes to rest.",
+    "llm_output": "The red cube continues descending until it reaches the bottom of the wooden box and comes to rest.",
+    "vision_output": "The door closes, and the blue cube is no longer visible from the camera's perspective.",
+    "world_model_output": "The door closes, and the blue cube is no longer visible from the camera's perspective.",
+    "analysis": "LLM correctly predicts the red cube continues downward and comes to rest at the bottom. Vision and world model instead describe a blue cube and a closing door, which are not in this clip. Stronger model for this clip: LLM.",
+    "models": {
+      "llm": {
+        "name": "Claude 4.5 Haiku",
+        "version": "4.5"
+      },
+      "vision": {
+        "name": "Amazon Nova Pro",
+        "version": "1.0"
+      },
+      "world_model": {
+        "name": "Meta V-JEPA",
+        "version": "2.0"
+      }
+    }
+  },
+  {
+    "clip_id": "clip_camera_solidity",
+    "scenario_type": "physical",
+    "video_url": "https://InfoSeeking.github.io/WorldModelDemo/clips/clip_camera_solidity.mp4",
+    "pause_frame_seconds": 7.5,
+    "ground_truth": "The red ball reaches the wooden barrier and bounces back rather than passing through it.",
+    "llm_output": "The red ball strikes the wooden barrier and bounces back in the opposite direction.",
+    "vision_output": "The red ball rolls towards the right, and the wooden structure moves to the left, revealing the ball behind it.",
+    "world_model_output": "The red ball rolls towards the right, and the wooden structure moves to the left, revealing the ball behind it.",
+    "analysis": "LLM captures the core solidity event: the red ball contacts the wooden barrier and bounces back. Vision and world model predict a reveal-through-motion event rather than a barrier collision. Stronger model for this clip: LLM.",
+    "models": {
+      "llm": {
+        "name": "Claude 4.5 Haiku",
+        "version": "4.5"
+      },
+      "vision": {
+        "name": "Amazon Nova Pro",
+        "version": "1.0"
+      },
+      "world_model": {
+        "name": "Meta V-JEPA",
+        "version": "2.0"
+      }
+    }
+  },
+  {
+    "clip_id": "clip_falling_flat_collision",
+    "scenario_type": "physical",
+    "video_url": "https://InfoSeeking.github.io/WorldModelDemo/clips/clip_falling_flat_collision.mp4",
+    "pause_frame_seconds": 7.5,
+    "ground_truth": "The crate lands on the brick block sitting on top of the platform, colliding with them in a physically normal way.",
+    "llm_output": "The crate lands on the platform and the brick block, compressing or displacing the block upon impact.",
+    "vision_output": "The wooden crate will fall onto the brick and crush it, then the crate will settle on the white platform.",
+    "world_model_output": "The wooden crate will fall onto the brick and crush it, then the crate will settle on the white platform.",
+    "analysis": "All models capture the main outcome that the falling crate lands on the block/platform. LLM is more conservative and scene-faithful, while vision and world model add a stronger impact consequence by saying the brick is crushed, which is plausible but not certain from this clip. Stronger model for this clip: borderline (LLM on fidelity; world model arguable on impact specificity).",
+    "models": {
+      "llm": {
+        "name": "Claude 4.5 Haiku",
+        "version": "4.5"
+      },
+      "vision": {
+        "name": "Amazon Nova Pro",
+        "version": "1.0"
+      },
+      "world_model": {
+        "name": "Meta V-JEPA",
+        "version": "2.0"
+      }
+    }
+  },
+  {
+    "clip_id": "clip_hot_air_balloon_continuity",
+    "scenario_type": "physical",
+    "video_url": "https://InfoSeeking.github.io/WorldModelDemo/clips/clip_hot_air_balloon_continuity.mp4",
+    "pause_frame_seconds": 7.5,
+    "ground_truth": "The hot air balloons move up and down, and the ball inside the hot air balloon disappears and reappears as the motion continues.",
+    "llm_output": "The hot air balloons continue drifting across the sky, with the occluded balloon emerging from behind the other as they move in their respective directions.",
+    "vision_output": "The hot air balloons continue to move in a circular motion, with the baskets remaining stationary on the ground.",
+    "world_model_output": "The hot air balloons continue to move in a circular motion, with the baskets remaining stationary on the ground.",
+    "analysis": "LLM correctly tracks continued balloon motion and occlusion continuity. Vision and world model introduce circular motion and stationary baskets on the ground, which conflict with the scene. Stronger model for this clip: LLM.",
+    "models": {
+      "llm": {
+        "name": "Claude 4.5 Haiku",
+        "version": "4.5"
+      },
+      "vision": {
+        "name": "Amazon Nova Pro",
+        "version": "1.0"
+      },
+      "world_model": {
+        "name": "Meta V-JEPA",
+        "version": "2.0"
+      }
+    }
+  },
+  {
+    "clip_id": "clip_moving_occluder_easy",
+    "scenario_type": "physical",
+    "video_url": "https://InfoSeeking.github.io/WorldModelDemo/clips/clip_moving_occluder_easy.mp4",
+    "pause_frame_seconds": 7.5,
+    "ground_truth": "The camera moves and passes the panel hiding the blue and red cube and reveals the blue cube and red object again moving back to original positions and the cubes stay still.",
+    "llm_output": "The wooden panel continues moving across the scene, revealing the blue cube and red object as it passes by them.",
+    "vision_output": "The wooden box will continue to rotate, revealing more of the desert landscape behind it as it turns.",
+    "world_model_output": "The wooden box will continue to rotate, revealing more of the desert landscape behind it as it turns.",
+    "analysis": "LLM correctly predicts that the occluder clears and the blocked objects are revealed again. Vision and world model switch to an unrelated rotating-box desert scene. Stronger model for this clip: LLM.",
+    "models": {
+      "llm": {
+        "name": "Claude 4.5 Haiku",
+        "version": "4.5"
+      },
+      "vision": {
+        "name": "Amazon Nova Pro",
+        "version": "1.0"
+      },
+      "world_model": {
+        "name": "Meta V-JEPA",
+        "version": "2.0"
+      }
+    }
+  },
+  {
+    "clip_id": "clip_moving_occluder_hard",
+    "scenario_type": "physical",
+    "video_url": "https://InfoSeeking.github.io/WorldModelDemo/clips/clip_moving_occluder_hard.mp4",
+    "pause_frame_seconds": 7.5,
+    "ground_truth": "The camera moves past the wooden panel and then comes back to the original position. While this movement happens and the wooden panel hides the objects, the objects switch positions with each other.",
+    "llm_output": "The wooden panel continues moving across the scene, exposing the light-colored cylinder and dark rounded object as it clears past them.",
+    "vision_output": "The wooden board is expected to continue its fall and eventually land on the ground in the desert.",
+    "world_model_output": "The wooden board is expected to continue its fall and eventually land on the ground in the desert.",
+    "analysis": "LLM follows the correct object family and occluder-reveal pattern, though it misses the hidden position-switch detail in the ground truth. Vision and world model predict a falling wooden board in a desert scene, which does not match this clip. Stronger model for this clip: LLM.",
+    "models": {
+      "llm": {
+        "name": "Claude 4.5 Haiku",
+        "version": "4.5"
+      },
+      "vision": {
+        "name": "Amazon Nova Pro",
+        "version": "1.0"
+      },
+      "world_model": {
+        "name": "Meta V-JEPA",
+        "version": "2.0"
+      }
+    }
+  },
+  {
+    "clip_id": "clip_rotating_cup_reveal_easy",
+    "scenario_type": "physical",
+    "video_url": "https://InfoSeeking.github.io/WorldModelDemo/clips/clip_rotating_cup_reveal_easy.mp4",
+    "pause_frame_seconds": 7.5,
+    "ground_truth": "There are 2 teacups that rotate during the clip. The teacup on the left has a blue object inside. During the rotation, the blue object isn't always visible but it remains inside the teacup and is revealed again when the teacup rotates back.",
+    "llm_output": "The teacup continues rotating on the saucer, alternately revealing and concealing the blue object and dark rectangular object inside as it spins.",
+    "vision_output": "The two bowls will continue to rotate in place, showing different parts of their designs and the changing reflections of the sky.",
+    "world_model_output": "The two bowls will continue to rotate in place, showing different parts of their designs and the changing reflections of the sky.",
+    "analysis": "LLM stays aligned with the observed dynamics by describing continued cup rotation with intermittent visibility of internal objects. Vision and world model correctly note ongoing rotation but misidentify the setup as generic bowls with sky reflections and miss the object-level behavior. Stronger model for this clip: LLM.",
+    "models": {
+      "llm": {
+        "name": "Claude 4.5 Haiku",
+        "version": "4.5"
+      },
+      "vision": {
+        "name": "Amazon Nova Pro",
+        "version": "1.0"
+      },
+      "world_model": {
+        "name": "Meta V-JEPA",
+        "version": "2.0"
+      }
+    }
+  },
+  {
+    "clip_id": "clip_rotating_cup_reveal_hard",
+    "scenario_type": "physical",
+    "video_url": "https://InfoSeeking.github.io/WorldModelDemo/clips/clip_rotating_cup_reveal_hard.mp4",
+    "pause_frame_seconds": 7.5,
+    "ground_truth": "There are 2 teacups that rotate during the clip. The teacup on the left has a pink object inside. During the rotation, the pink object isn't  visible and switches positions during the rotation from left teacup to right teacup.",
+    "llm_output": "The teacup continues rotating on the saucer, alternately revealing and concealing the pink object and dark rectangular object inside as it spins.",
+    "vision_output": "The red ball is released from the left cup and is about to be caught by the right cup.",
+    "world_model_output": "The red ball is released from the left cup and is about to be caught by the right cup.",
+    "analysis": "LLM captures ongoing rotation and intermittent visibility, but it does not mention the cross-cup transfer behavior in this hard clip. Vision and world model capture the left-to-right transfer dynamic, but they misidentify the transferred item as a red ball instead of the pink object. Stronger model for this clip: world model (on transfer dynamics), with LLM stronger on object identity wording.",
+    "models": {
+      "llm": {
+        "name": "Claude 4.5 Haiku",
+        "version": "4.5"
+      },
+      "vision": {
+        "name": "Amazon Nova Pro",
+        "version": "1.0"
+      },
+      "world_model": {
+        "name": "Meta V-JEPA",
+        "version": "2.0"
+      }
+    }
+  },
+  {
+    "clip_id": "clip_stacked_blocks_tower",
+    "scenario_type": "physical",
+    "video_url": "https://InfoSeeking.github.io/WorldModelDemo/clips/clip_stacked_blocks_tower.mp4",
+    "pause_frame_seconds": 7.5,
+    "ground_truth": "The camera shows a platfrom and then rotates to show a tower structure with hanging striped panels. A blue ball is dropped from the air and drops on the platform. The ball is hidden by the striped panels and the tower structure remains standing.",
+    "llm_output": "The tower structure remains standing as it is, with the hanging striped panels and platforms continuing to be supported by the scaffold framework.",
+    "vision_output": "The colorful fabric continues to hang on the metal frame, swaying gently in the wind. The scene remains static, with no significant changes or movements.",
+    "world_model_output": "The colorful fabric continues to hang on the metal frame, swaying gently in the wind. The scene remains static, with no significant changes or movements.",
+    "analysis": "LLM best matches the scaffold/tower scene and the structure-stays-standing outcome. Vision and world model partially align on overall stability but reduce the scene to hanging fabric and omit key tower/ball context. Stronger model for this clip: LLM.",
+    "models": {
+      "llm": {
+        "name": "Claude 4.5 Haiku",
+        "version": "4.5"
+      },
+      "vision": {
+        "name": "Amazon Nova Pro",
+        "version": "1.0"
+      },
+      "world_model": {
+        "name": "Meta V-JEPA",
+        "version": "2.0"
+      }
+    }
+  }
+]
