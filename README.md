@@ -1,5 +1,9 @@
 # OpenWorld
 
+![OpenWorld banner](assets/banner.svg)
+
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg) [![Live Demo](https://img.shields.io/badge/Live_Demo-InfoSeeking.github.io-4a90d9)](https://InfoSeeking.github.io/WorldModelDemo/) ![Status: Research](https://img.shields.io/badge/Status-Research-lightgrey)
+
 OpenWorld lowers the barrier to building, evaluating, and comparing world models for researchers and developers who do not have large-scale AI infrastructure.
 
 ---
@@ -38,9 +42,9 @@ See [ROADMAP.md](ROADMAP.md) for the full plan and current status.
 
 ## Who We Are
 
-**UW InfoSeeking Lab** studies how people seek, use, and make sense of information, with growing work on AI systems that model the physical and social world.
+**[UW InfoSeeking Lab](https://infoseeking.org)** studies how people seek, use, and make sense of information, with growing work on AI systems that model the physical and social world.
 
-**RAISE Center for Responsible AI** at the University of Washington advances research on AI that is safe, accountable, and grounded in real-world constraints.
+**[RAISE Center for Responsible AI](https://raise.uw.edu)** at the University of Washington advances research on AI that is safe, accountable, and grounded in real-world constraints.
 
 ---
 
