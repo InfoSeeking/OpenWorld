@@ -1,2 +1,49 @@
 # OpenWorld
-An Open Toolkit for World Model Research and Development
+
+OpenWorld lowers the barrier to building, evaluating, and comparing world models for researchers and developers who do not have large-scale AI infrastructure.
+
+---
+
+## Live Demo
+
+[https://InfoSeeking.github.io/WorldModelDemo/](https://InfoSeeking.github.io/WorldModelDemo/)
+
+An interactive benchmark that places an LLM (Claude 4.5 Haiku), a vision model (Amazon Nova Pro), and a world model (Meta V-JEPA 2) side by side on the same physical scene clips. You can step through each clip, see what each model predicts, and inspect where they agree or diverge.
+
+---
+
+## Why This Matters
+
+Tooling for large language models has matured considerably — standardized benchmarks, evaluation harnesses, and model adapters are widely available. World models have not caught up. There is no agreed-upon benchmark format, no shared schema for physical scene data, and no lightweight framework that lets a researcher swap in a new model without rewriting infrastructure from scratch. As world models move from research curiosities to components in robotics, simulation, and embodied AI pipelines, that gap becomes a practical problem. OpenWorld is an attempt to close it incrementally, in the open.
+
+---
+
+## What's Here Now
+
+- **Benchmark data** — a curated set of physical scene video clips with ground-truth labels for object state, motion, and outcome.
+- **Schema** — a documented JSON schema for scene clips, model predictions, and evaluation records, designed to be model-agnostic.
+- **Primer** — a short document orienting newcomers to world model concepts, the benchmark design decisions, and how the pieces fit together.
+
+---
+
+## What's Coming
+
+- **Adapter modules** — thin wrappers that connect new models to the benchmark pipeline with minimal boilerplate.
+- **Extended benchmark** — broader coverage of physical phenomena, more clip diversity, and additional annotators.
+- **Phase 1 targets** — defined milestones for evaluation metrics, supported model classes, and documentation completeness.
+
+See [ROADMAP.md](ROADMAP.md) for the full plan and current status.
+
+---
+
+## Who We Are
+
+**UW InfoSeeking Lab** studies how people seek, use, and make sense of information, with growing work on AI systems that model the physical and social world.
+
+**RAISE Center for Responsible AI** at the University of Washington advances research on AI that is safe, accountable, and grounded in real-world constraints.
+
+---
+
+## How to Contribute
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on submitting data, code, or documentation.
