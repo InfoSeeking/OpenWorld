@@ -1,5 +1,3 @@
-# OpenWorld
-
 ![OpenWorld banner](assets/banner.svg)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg) [![Live Demo](https://img.shields.io/badge/Live_Demo-InfoSeeking.github.io-4a90d9)](https://InfoSeeking.github.io/WorldModelDemo/) ![Status: Research](https://img.shields.io/badge/Status-Research-lightgrey)
