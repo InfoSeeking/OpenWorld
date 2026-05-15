@@ -1,32 +1,35 @@
-# Adapters
 
-Implementations are not yet available. Development begins Summer 2026. See [ROADMAP.md](../ROADMAP.md) for milestones.
+# Domain Adapters (Phase 2)
 
----
+**This directory (`adapters/`) is reserved for DOMAIN adapters, not model adapters.**
 
-## What Is a World Adapter?
+## What are Domain Adapters?
+Domain adapters are connectors for domain-specific data sources. They transform raw data from specialized fields into a standardized format that OpenWorld benchmarks can consume.
 
-A world adapter is a modular connector between domain-specific input data and an existing open world model architecture. The adapter handles the translation work: converting raw domain data into the tensor format a given world model expects, and mapping the model's output back into a structured prediction record that the OpenWorld benchmark can score.
+**Examples:**
+- Satellite imagery for climate science
+- Electronic health records for healthcare
+- Sensor data for agriculture
 
-Adapters do not modify the underlying world model. They do not retrain it. They standardize the data pipeline so that a practitioner with domain-specific data can evaluate an existing model without writing custom preprocessing and output-parsing code from scratch.
-
----
-
-## Planned Domains (Phase 2, Fall 2026–Spring 2027)
-
-**Climate and environment** — satellite and remote sensing imagery, weather observation sequences, land use time series. Target tasks: environmental state change prediction, anomaly detection.
-
-**Health** — procedural video from clinical or care settings, structured time series from monitoring devices. Target tasks: activity prediction, state progression estimation. Adapters in this domain will not process identifiable patient data; inputs are assumed to be de-identified before ingestion.
-
-**Agriculture** — field imagery, crop sensor readings, growth-stage sequences. Target tasks: crop state estimation, yield trajectory prediction.
+Domain adapters are essential for applying world model evaluation to real-world, cross-domain problems. They handle the unique preprocessing, normalization, and structuring required for each domain.
 
 ---
 
-## Intended Interface
+## How are Domain Adapters Different from Model Adapters?
+- **Domain adapters** (this directory):
+	- Convert raw domain data (e.g., images, records, sensor streams) into benchmark-ready datasets.
+	- Example: A climate adapter that loads and preprocesses satellite data for evaluation.
+- **Model adapters** (`openworld/models/`):
+	- Wrap AI models (e.g., V-JEPA 2, DreamerV3) to conform to the `BaseWorldModel` interface.
+	- Convert model outputs into a format that OpenWorld metrics can consume.
 
-Each adapter exposes two functions:
+**Do not confuse these!**
+- Domain adapters = data connectors
+- Model adapters = model wrappers
 
-- `preprocess(raw_input) → model_input` — converts domain data into the tensor or frame sequence format expected by the target world model architecture.
-- `postprocess(model_output) → prediction_record` — converts raw model output into a benchmark-compatible record conforming to the schema defined in [benchmark/schema.md](../benchmark/schema.md).
+---
 
-Adapters are stateless. They carry no model weights and have no training loop.
+## Status
+Domain adapters are coming in **Phase 2**. See [ROADMAP.md](../ROADMAP.md) for details and planned domains.
+
+For now, see `openworld/models/` for model adapters and `benchmark/` for evaluation datasets.
