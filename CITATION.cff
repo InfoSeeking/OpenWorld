@@ -3,7 +3,7 @@ title: 'OpenWorld: An Open-Source SDK for World Model Research and Development'
 authors:
   - family-names: Shah
     given-names: Chirag
-    affiliation: UW InfoSeeking Lab and RAISE Center for Responsible AI, University of Washington
+    affiliation: InfoSeeking Lab and RAISE Center for Responsible AI, University of Washington
     # TODO: Add additional authors here
 version: 0.0.1
 date-released: 2026-05-15
@@ -16,6 +16,6 @@ preferred-citation:
   authors:
     - family-names: Shah
       given-names: Chirag
-      affiliation: UW InfoSeeking Lab and RAISE Center for Responsible AI, University of Washington
+      affiliation: InfoSeeking Lab and RAISE Center for Responsible AI, University of Washington
       # TODO: Add additional authors here
   notes: 'In preparation'
