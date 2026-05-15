@@ -83,14 +83,3 @@ See the project website and [CONTRIBUTING.md](CONTRIBUTING.md) for more about th
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on submitting data, code, or documentation.
 
-## Who We Are
-
-**[UW InfoSeeking Lab](https://infoseeking.org)** studies how people seek, use, and make sense of information, with growing work on AI systems that model the physical and social world.
-
-**[RAISE Center for Responsible AI](https://raise.uw.edu)** at the University of Washington advances research on AI that is safe, accountable, and grounded in real-world constraints.
-
----
-
-## How to Contribute
-
-Read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on submitting data, code, or documentation.
