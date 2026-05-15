@@ -52,11 +52,11 @@ def my_metric(embeddings: np.ndarray, labels: np.ndarray) -> float:
 
 ## Contributing Benchmark Data
 
-Benchmark data must follow the schema described in [benchmark/README.md](benchmark/README.md) (see also [benchmark/schema.md](benchmark/schema.md)).
+Benchmark data must follow the schema described in [data/README.md](data/README.md) (see also [data/schema.md](data/schema.md)).
 
 - Do not commit video files; use stable, public URLs.
 - Fill all required fields and provide verifiable ground truth.
-- Add new records to the appropriate results file (e.g., `benchmark/results/clip_results.json`).
+- Add new records to the appropriate results file (e.g., `data/results/clip_results.json`).
 
 ---
 

@@ -4,9 +4,9 @@ transform.py
 Reshapes WorldModelDemo clips.json into the OpenWorld benchmark schema.
 
 Usage:
-    python benchmark/transform.py \
+    python data/transform.py \
         --input  <path-or-url to clips.json> \
-        --output benchmark/results/clip_results.json
+        --output data/results/clip_results.json
 
 If --input is omitted, the script fetches the canonical demo file from GitHub.
 """
@@ -100,7 +100,7 @@ def load_source(path_or_url: str) -> list[dict]:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Transform WorldModelDemo clips to OpenWorld schema.")
     parser.add_argument("--input",  default=SOURCE_URL, help="Path or URL to source clips.json")
-    parser.add_argument("--output", default="benchmark/results/clip_results.json",
+    parser.add_argument("--output", default="data/results/clip_results.json",
                         help="Output path for transformed records")
     args = parser.parse_args()
 

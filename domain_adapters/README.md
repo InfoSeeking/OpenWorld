@@ -1,7 +1,7 @@
 
 # Domain Adapters (Phase 2)
 
-**This directory (`adapters/`) is reserved for DOMAIN adapters, not model adapters.**
+**This directory (`domain_adapters/`) is reserved for DOMAIN adapters, not model adapters.**
 
 ## What are Domain Adapters?
 Domain adapters are connectors for domain-specific data sources. They transform raw data from specialized fields into a standardized format that OpenWorld benchmarks can consume.
@@ -32,4 +32,4 @@ Domain adapters are essential for applying world model evaluation to real-world,
 ## Status
 Domain adapters are coming in **Phase 2**. See [ROADMAP.md](../ROADMAP.md) for details and planned domains.
 
-For now, see `openworld/models/` for model adapters and `benchmark/` for evaluation datasets.
+For now, see `openworld/models/` for model adapters and `data/` for evaluation datasets.
