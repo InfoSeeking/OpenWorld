@@ -26,10 +26,10 @@ class DemoClips(BaseBenchmark):
     @classmethod
     def load(cls: Type[T], path: str | Path | None = None) -> T:
         """
-        Load clips from a JSON file. If path is None, loads from benchmark/clips.json relative to repo root.
+        Load clips from a JSON file. If path is None, loads from benchmark/results/clip_results.json relative to repo root.
         """
         if path is None:
-            default_path = Path(__file__).parent.parent.parent / 'benchmark' / 'clips.json'
+            default_path = Path(__file__).parent.parent.parent / 'benchmark' / 'results' / 'clip_results.json'
             path = default_path
         with open(path, 'r', encoding='utf-8') as f:
             clips = json.load(f)

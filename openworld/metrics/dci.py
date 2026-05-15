@@ -1,4 +1,4 @@
-"""
+r"""
 DCI Disentanglement Metric
 
 Formal definition (from §3.3 of the paper):
