@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: 'OpenWorld: An Open-Source SDK for World Model Research and Development'
+authors:
+  - family-names: Shah
+    given-names: Chirag
+    affiliation: UW InfoSeeking Lab and RAISE Center for Responsible AI, University of Washington
+    # TODO: Add additional authors here
+version: 0.0.1
+date-released: 2026-05-15
+license: MIT
+repository-code: https://github.com/InfoSeeking/OpenWorld
+type: software
+preferred-citation:
+  type: article
+  title: 'Shortcuts, Structure, and Physics: What World Model Representations Actually Encode'
+  authors:
+    - family-names: Shah
+      given-names: Chirag
+      affiliation: UW InfoSeeking Lab and RAISE Center for Responsible AI, University of Washington
+      # TODO: Add additional authors here
+  notes: 'In preparation'
