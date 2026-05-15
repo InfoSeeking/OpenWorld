@@ -1,47 +1,85 @@
+
 # Contributing to OpenWorld
 
-Thanks for your interest. This is an early-stage research project, so contributions are welcome but the codebase and data formats are still stabilizing. When in doubt, open an issue before writing code.
+Thank you for your interest in contributing! OpenWorld is an evolving research SDK. We welcome contributions of models, metrics, data, and documentation. If in doubt, open an issue before starting work.
 
 ---
 
-## Adding Benchmark Clips
+## Setup
 
-New clips must conform to the schema defined in [benchmark/schema.md](benchmark/schema.md). Before submitting:
-
-1. Confirm the clip has a stable, publicly accessible `video_url`. Do not commit video files to the repository.
-2. Fill all required fields. The `scenario_type` must be one of the enumerated values in the schema; if your clip requires a new type, propose it first (see below).
-3. Verify that `ground_truth` is written from direct observation of the clip, not inferred from model outputs.
-4. Add your record(s) to `benchmark/results/clip_results.json` and open a pull request with a brief description of what the clips test and where they came from.
-
-Clips that cannot be independently verified against a ground truth will not be merged.
+1. Clone the repository:
+	```sh
+	git clone https://github.com/InfoSeeking/OpenWorld.git
+	cd OpenWorld
+	```
+2. Create a virtual environment (recommended):
+	```sh
+	python -m venv .venv
+	source .venv/bin/activate
+	```
+3. Install dependencies (including dev tools):
+	```sh
+	pip install -e .[dev]
+	```
 
 ---
 
-## Proposing a New Adapter Domain
+## Contributing a New Model Adapter
 
-Open a GitHub issue using the **Adapter Proposal** label and include:
+Model adapters wrap AI models (e.g., V-JEPA 2, DreamerV3) to conform to the `BaseWorldModel` interface. See [docs/adding_a_model.md](docs/adding_a_model.md) for a step-by-step guide.
 
-- The target domain and what real-world task it addresses.
-- The data format (modality, typical input shape, publicly available example datasets).
-- Which world model architecture you plan to connect to.
-- Any known access or licensing constraints on the data.
+---
 
-Proposals without example data sources are unlikely to be prioritized. If you have an existing implementation, link to it.
+## Contributing a New Metric
+
+Add new metrics as a single function in `openworld/metrics/`.
+
+- Use type hints on all arguments and return values.
+- Include a docstring with the formal definition. If the docstring contains LaTeX, use a raw string (prefix with `r"""`).
+- One function per metric; keep it focused.
+
+Example skeleton:
+```python
+def my_metric(embeddings: np.ndarray, labels: np.ndarray) -> float:
+	 r"""
+	 Computes the MyMetric score.
+	 Formal definition: ...
+	 """
+	 # implementation
+```
+
+---
+
+## Contributing Benchmark Data
+
+Benchmark data must follow the schema described in [benchmark/README.md](benchmark/README.md) (see also [benchmark/schema.md](benchmark/schema.md)).
+
+- Do not commit video files; use stable, public URLs.
+- Fill all required fields and provide verifiable ground truth.
+- Add new records to the appropriate results file (e.g., `benchmark/results/clip_results.json`).
 
 ---
 
 ## Code Style
 
-This is a research toolkit, not a production system. The bar is: readable, documented at the function level, and not broken. Specifically:
+- Use [ruff](https://docs.astral.sh/ruff/) for linting and formatting.
+- Type hints are required on all public functions.
+- Every module (file) should start with a short docstring.
+- Keep code readable and well-documented, but don't over-engineer.
 
-- Python: follow PEP 8, use type hints on public function signatures, keep functions short.
-- No external dependencies without justification. If you need a library, add it to `requirements.txt` and explain why in your PR.
-- Tests are appreciated but not required for data contributions. They are expected for adapter code.
+---
+
+## Running Tests
+
+Run all tests with:
+```sh
+pytest
+```
 
 ---
 
 ## Reaching the Team
 
-Open a GitHub issue for bugs, questions, or proposals. For anything that should not be public, email the UW InfoSeeking Lab at the address listed on the [lab website](https://infoseeking.org).
+Open a GitHub issue for bugs, questions, or proposals. For private matters, email the UW InfoSeeking Lab (see [lab website](https://infoseeking.org)).
 
-Response times will vary. This project is run by a small academic team alongside other research commitments.
+Response times may vary; this project is run by a small academic team.
