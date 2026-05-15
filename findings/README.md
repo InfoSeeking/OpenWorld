@@ -16,6 +16,8 @@ A world model with genuine physical understanding should represent a physically 
 | DreamerV3    | 12.6%   | 13.0%       | 12.0%        |
 | VideoMAE v2  | 8.1%    | 16.5%       | ~0%          |
 
+![Shortcut exploitation by camera type](figures/shortcut_camera_effect.png)
+
 **Latent structure metrics:**
 
 | Model       | GT Sil. | KM Sil. | Centroid Gap | NN Gap | Invariance |

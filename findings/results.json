@@ -1,0 +1,17 @@
+{
+  "shortcut_exploitation": {
+    "vjepa2": { "overall": 0.213, "fixed_camera": 0.310, "moving_camera": 0.140 },
+    "dreamerv3": { "overall": 0.126, "fixed_camera": 0.130, "moving_camera": 0.120 },
+    "videomae_v2": { "overall": 0.081, "fixed_camera": 0.165, "moving_camera": 0.0 }
+  },
+  "latent_structure": {
+    "vjepa2": { "gt_silhouette": -0.006, "km_silhouette": 0.169, "centroid_gap": 0.079, "nn_gap": -0.631, "invariance": 0.004 },
+    "videomae_v2": { "gt_silhouette": 0.013, "km_silhouette": 0.222, "centroid_gap": 0.002, "nn_gap": -0.033, "invariance": 0.029 },
+    "dreamerv3": { "gt_silhouette": -0.026, "km_silhouette": 0.314, "centroid_gap": -71.29, "nn_gap": 0.002, "invariance": -0.007 }
+  },
+  "dci_metrics": {
+    "vjepa2": { "informativeness": 0.552, "disentanglement": 0.093, "completeness": 0.023 },
+    "videomae_v2": { "informativeness": 0.800, "disentanglement": 0.153, "completeness": 0.019 },
+    "dreamerv3": { "informativeness": 0.553, "disentanglement": null, "completeness": null }
+  }
+}

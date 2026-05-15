@@ -1,0 +1,9 @@
+
+[dev]
+pytest
+ruff
+
+[models]
+transformers
+torch
+einops

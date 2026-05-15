@@ -70,9 +70,9 @@ See [ROADMAP.md](ROADMAP.md) for the full plan and current status.
 
 ## Who We Are
 
-OpenWorld is developed by the [UW InfoSeeking Lab](https://infoseeking.org) and the [RAISE Center for Responsible AI](https://raise.uw.edu) at the University of Washington.
+OpenWorld is developed by the [InfoSeeking Lab](https://infoseeking.org) and the [RAISE Center for Responsible AI](https://raise.uw.edu) at the University of Washington.
 
-- **UW InfoSeeking Lab** studies how people seek, use, and make sense of information, with growing work on AI systems that model the physical and social world.
+- **InfoSeeking Lab** studies how people seek, use, and make sense of information, with growing work on AI systems that model the physical and social world.
 - **RAISE Center for Responsible AI** advances research on AI that is safe, accountable, and grounded in real-world constraints.
 
 See the project website and [CONTRIBUTING.md](CONTRIBUTING.md) for more about the team and how to get involved.
